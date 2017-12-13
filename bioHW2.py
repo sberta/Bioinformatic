@@ -88,12 +88,21 @@ diameterGU =nx.diameter(G_U)
 diameterSGI =nx.diameter(G_sgi)
 
 #%%
-
+import operator
 centrGU = nx.degree_centrality(G_U)
+max(centrGU, key=centrGU.get)
 
 centrGI = nx.degree_centrality(G_I)
+max(centrGU, key=centrGU.get)
 
 centrSGI = nx.degree_centrality(G_sgi)
+max(centrGU, key=centrGU.get)
+
+#%%
+
+LCCgi = max(nx.connected_component_subgraphs(G_I), key=len)
+LCCgu = max(nx.connected_component_subgraphs(G_U), key=len)
+LCCgsgi = max(nx.connected_component_subgraphs(G_sgi), key=len)
 
 
 
