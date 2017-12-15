@@ -207,7 +207,6 @@ clos_cenLCCsgi = nx.closeness_centrality(LCCsgi, normalized=True)
 clos_cenLCCgu = nx.closeness_centrality(LCCgu, normalized=True)
 
 #%% 1.2 b5    
-betwLCCgi.items
 
 nodeRatioLCCgi =  {k: betwLCCgi[k]/degreeLCCgi[k] for k in betwLCCgi.keys()} 
 
